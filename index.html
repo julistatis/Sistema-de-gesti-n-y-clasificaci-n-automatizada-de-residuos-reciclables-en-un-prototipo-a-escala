@@ -91,7 +91,7 @@ footer{
     
 <a href="#bitacora">Bitacora</a>
     
-<a href="·simulaciones">Simulaciones</a>
+<a href="#simulaciones">Simulaciones</a>
     
 <a href="#monitoreo">Monitoreo en vivo</a>
 </nav>
@@ -196,6 +196,89 @@ Aquí podrás poner los enlaces de Wokwi y Google Colab.
 <footer>
 <p>Proyecto Académico 2026 ♻️</p>
 </footer>
+
+    <script>
+let metal = 0;
+let plastico = 0;
+let vidrio = 0;
+let organico = 0;
+let procesados = 0;
+
+function simularCorrida() {
+
+    // Reiniciar contadores
+    metal = 0;
+    plastico = 0;
+    vidrio = 0;
+    organico = 0;
+    procesados = 0;
+
+    let telemetria = "";
+
+    // Crear 20 residuos simulados
+    for (let i = 1; i <= 20; i++) {
+
+        const residuos = [
+            "Metal",
+            "Plástico",
+            "Vidrio",
+            "Orgánico"
+        ];
+
+        const objeto = residuos[
+            Math.floor(Math.random() * residuos.length)
+        ];
+
+        procesados++;
+
+        if (objeto === "Metal") {
+            metal++;
+            telemetria +=
+                `[Objeto ${i}] Sensor inductivo: SÍ → METAL\n`;
+        }
+
+        if (objeto === "Plástico") {
+            plastico++;
+            telemetria +=
+                `[Objeto ${i}] Peso bajo y color detectado → PLÁSTICO\n`;
+        }
+
+        if (objeto === "Vidrio") {
+            vidrio++;
+            telemetria +=
+                `[Objeto ${i}] Peso alto y material transparente → VIDRIO\n`;
+        }
+
+        if (objeto === "Orgánico") {
+            organico++;
+            telemetria +=
+                `[Objeto ${i}] Humedad alta → ORGÁNICO\n`;
+        }
+    }
+
+    // Actualizar los datos en la página
+    document.getElementById("lote").textContent =
+        procesados + " / 20";
+
+    document.getElementById("metal").textContent = metal;
+    document.getElementById("plastico").textContent = plastico;
+    document.getElementById("vidrio").textContent = vidrio;
+    document.getElementById("organico").textContent = organico;
+
+    // Todos los materiales clasificados se consideran aprovechados
+    const aprovechados =
+        metal + plastico + vidrio + organico;
+
+    const porcentaje =
+        (aprovechados / procesados) * 100;
+
+    document.getElementById("aprovechamiento").textContent =
+        porcentaje.toFixed(0) + "%";
+
+    document.getElementById("telemetria").value =
+        telemetria;
+}
+</script>
 
 </body>
 </html>
