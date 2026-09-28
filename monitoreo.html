@@ -1,1 +1,32 @@
-<a href="#monitoreo">Monitoreo en vivo</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitoreo en Vivo</title>
+</head>
+
+<body>
+
+<h1>Monitoreo en Vivo</h1>
+
+<p>Lote Oficial: <span id="lote">0 / 20</span></p>
+
+<p>Metal: <span id="metal">0</span></p>
+
+<button onclick="simularCorrida()">
+Simular Corrida (20 Objetos)
+</button>
+
+<script>
+
+function simularCorrida(){
+ document.getElementById("lote").innerHTML="20 / 20";
+ document.getElementById("metal").innerHTML="5";
+}
+
+</script>
+
+</body>
+</html>
+
