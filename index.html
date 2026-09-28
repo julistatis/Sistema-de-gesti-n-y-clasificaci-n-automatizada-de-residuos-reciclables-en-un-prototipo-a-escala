@@ -6,6 +6,7 @@
 <title>Sistema de Gestión y Clasificación Automatizada de Residuos Reciclables</title>
 
 <style>
+
 body{
     font-family: Arial, sans-serif;
     margin:0;
@@ -17,6 +18,25 @@ header{
     color:white;
     text-align:center;
     padding:50px;
+}
+
+nav{
+    background:#146c43;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+    padding:10px;
+}
+
+nav a:hover{
+    background:#198754;
+    border-radius:5px;
 }
 
 section{
@@ -53,6 +73,7 @@ footer{
     padding:15px;
     margin-top:20px;
 }
+
 </style>
 </head>
 
@@ -65,64 +86,51 @@ footer{
 </header>
 
 <nav>
-    Inicio
-    Flujograma
-    Bitacora del prototipo
-    Simulaciones
-    Monitoreo en vivo
+    #inicioInicio</a>
+    #flujogramaFlujograma</a>
+    #bitacoraBitácora</a>
+    #simulacionesSimulaciones</a>
+    #monitoreoMonitoreo en vivo</a>
 </nav>
-<section id="Inicio">
-    ...
-</section>
-<section id="Flujograma">
-    ...
-</section>
-<section id="Bitacora del proyecto">
-    ...
-</section>
-<section id="Simulaciones">
-    ...
-</section>
-<section id="Monitoreo en vivo">
-</section>
 
-</body>
-<section>
+<section id="inicio">
+
 <h2>Descripción del proyecto</h2>
 
 <p>
-Este proyecto consiste en el diseño y construcción de un prototipo a escala para la clasificación automatizada de residuos reciclables, tomando como referencia la problemática de los residuos sólidos en la localidad de Kennedy. El sistema representa etapas como el ingreso del residuo, transporte mediante una banda, lectura de sensores, procesamiento de datos, clasificación, desvío con servomotores, depósito, conteo y monitoreo. Las categorías de clasificación son plástico, metal, vidrio y orgánico. Además, se incluye una etapa demostrativa para el aprovechamiento del plástico mediante la transformación de botellas PET en hilo reutilizable. El proyecto integra mecánica, electrónica, programación y organización de procesos, con el objetivo de demostrar el funcionamiento de una alternativa automatizada para la clasificación de residuos y evaluar sus posibilidades de mejora.
-</section>
+Este proyecto consiste en el diseño y construcción de un prototipo a escala para la clasificación automatizada de residuos reciclables, tomando como referencia la problemática de los residuos sólidos en la localidad de Kennedy. El sistema representa etapas como el ingreso del residuo, transporte mediante una banda, lectura de sensores, procesamiento de datos, clasificación, desvío con servomotores, depósito, conteo y monitoreo.
+</p>
 
-<section>
 <h2>Sensores Utilizados</h2>
 
 <div class="tarjetas">
 
 <div class="tarjeta">
-<h3> Sensor Inductivo</h3>
+<h3>Sensor Inductivo</h3>
 <p>Detecta materiales metálicos.</p>
 </div>
 
 <div class="tarjeta">
-<h3> TCS3200</h3>
+<h3>TCS3200</h3>
 <p>Identifica características relacionadas con el color.</p>
 </div>
 
 <div class="tarjeta">
-<h3> HX711 + Celda de carga</h3>
+<h3>HX711 + Celda de carga</h3>
 <p>Mide el peso del residuo.</p>
 </div>
 
 <div class="tarjeta">
-<h3> DHT11</h3>
+<h3>DHT11</h3>
 <p>Registra humedad ambiental.</p>
 </div>
 
 </div>
+
 </section>
 
-<section>
+<section id="flujograma">
+
 <h2>Proceso de Clasificación</h2>
 
 <ol>
@@ -135,6 +143,36 @@ Este proyecto consiste en el diseño y construcción de un prototipo a escala pa
 <li>Depósito en contenedores.</li>
 <li>Conteo y monitoreo.</li>
 </ol>
+
+</section>
+
+<section id="bitacora">
+
+<h2>Bitácora del Prototipo</h2>
+
+<p>
+Aquí podrás agregar avances, fotografías, pruebas y evidencias del desarrollo del proyecto.
+</p>
+
+</section>
+
+<section id="simulaciones">
+
+<h2>Simulaciones</h2>
+
+<p>
+Aquí podrás colocar los enlaces de Wokwi y Google Colab.
+</p>
+
+</section>
+
+<section id="monitoreo">
+
+<h2>Monitoreo en Vivo</h2>
+
+<p>
+Aquí podrás mostrar datos enviados por el sistema, conteos de residuos y resultados de clasificación.
+</p>
 
 </section>
 
