@@ -170,13 +170,27 @@ Aquí podrás poner los enlaces de Wokwi y Google Colab.
 </section>
 
 <section id="monitoreo">
+    <h2>Monitoreo en Vivo</h2>
 
-<h2>Monitoreo en Vivo</h2>
+    <p>Lote Oficial: <span id="lote">0 / 20</span></p>
 
-<p>
-Aquí podrás mostrar datos del sistema, conteos y resultados.
-</p>
+    <p>Aprovechamiento: <span id="aprovechamiento">0%</span></p>
 
+    <p>Metal: <span id="metal">0</span></p>
+
+    <p>Plástico: <span id="plastico">0</span></p>
+
+    <p>Vidrio: <span id="vidrio">0</span></p>
+
+    <p>Orgánico: <span id="organico">0</span></p>
+
+    <button onclick="simularCorrida()">
+      Simular Corrida (20 Objetos)
+    </button>
+
+    <br><br>
+
+    <textarea id="telemetria" rows="10" cols="50"></textarea>
 </section>
 
 <footer>
