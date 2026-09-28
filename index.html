@@ -1,258 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema de Gestión y Clasificación Automatizada de Residuos Reciclables</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>
+        Sistema de Gestión y Clasificación Automatizada de Residuos Reciclables
+    </title>
 
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f5f5f5;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
 
-header{
-    background:#198754;
-    color:white;
-    text-align:center;
-    padding:50px;
-}
+        header {
+            background: #198754;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
 
-nav{
-    background:#146c43;
-    padding:15px;
-    text-align:center;
-}
+        nav {
+            background: #146c43;
+            padding: 15px;
+            text-align: center;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    padding:10px 15px;
-    font-weight:bold;
-    border-radius:5px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 15px;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
 
-nav a:hover{
-    background:#198754;
-}
+        nav a:hover {
+            background: #198754;
+        }
 
-section{
-    width:80%;
-    margin:auto;
-    background:white;
-    margin-top:20px;
-    padding:25px;
-    border-radius:10px;
-}
+        section {
+            width: 80%;
+            margin: 20px auto 0;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
 
-h2{
-    color:#198754;
-}
+        h2 {
+            color: #198754;
+        }
 
-.tarjetas{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
+        .tarjetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-.tarjeta{
-    flex:1;
-    min-width:200px;
-    background:#e8f5e9;
-    padding:15px;
-    border-radius:10px;
-}
+        .tarjeta {
+            flex: 1;
+            min-width: 200px;
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+        }
 
-footer{
-    text-align:center;
-    background:#198754;
-    color:white;
-    padding:15px;
-    margin-top:20px;
-}
+        footer {
+            text-align: center;
+            background: #198754;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
 
-</style>
+        @media (max-width: 600px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            section {
+                width: 85%;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<h1>SISTEMA DE GESTIÓN Y CLASIFICACIÓN AUTOMATIZADA DE RESIDUOS RECICLABLES EN UN PROTOTIPO A ESCALA</h1>
-<p>Caso de aplicación: Localidad de Kennedy, Bogotá</p>
-</header>
+    <header>
+        <h1>
+            SISTEMA DE GESTIÓN Y CLASIFICACIÓN AUTOMATIZADA
+            DE RESIDUOS RECICLABLES EN UN PROTOTIPO A ESCALA
+        </h1>
 
-<nav>
-<a href="#inicio">Incio</a>
-    
-<a href="#flujograma">Flujograma</a>
-    
-<a href="#bitacora">Bitacora</a>
-    
-<a href="#simulaciones">Simulaciones</a>
-    
-<a href="monitoreo.html">Monitoreo en vivo</a>
-</nav>
+        <p>Caso de aplicación: Localidad de Kennedy, Bogotá</p>
+    </header>
 
-<section id="inicio">
+    <nav>
+        #inicioInicio</a>
 
-<h2>Descripción del proyecto</h2>
+        #flujogramaFlujograma</a>
 
-<p>
-Este proyecto consiste en el diseño y construcción de un prototipo a escala para la clasificación automatizada de residuos reciclables, tomando como referencia la problemática de los residuos sólidos en la localidad de Kennedy.
-</p>
+        #bitacoraBitácora</a>
 
-<h2>Sensores Utilizados</h2>
+        #simulacionesSimulaciones</a>
 
-<div class="tarjetas">
+        <a href="monitoreo.html">Monitoreo en vivo</a>
+    </nav>
 
-<div class="tarjeta">
-<h3>Sensor Inductivo</h3>
-<p>Detecta materiales metálicos.</p>
-</div>
+    <section id="inicio">
 
-<div class="tarjeta">
-<h3>TCS3200</h3>
-<p>Identifica características relacionadas con el color.</p>
-</div>
+        <h2>Descripción del proyecto</h2>
 
-<div class="tarjeta">
-<h3>HX711 + Celda de carga</h3>
-<p>Mide el peso del residuo.</p>
-</div>
+        <p>
+            Este proyecto consiste en el diseño y construcción de un
+            prototipo a escala para la clasificación automatizada de
+            residuos reciclables, tomando como referencia la problemática
+            de los residuos sólidos en la localidad de Kennedy.
+        </p>
 
-<div class="tarjeta">
-<h3>DHT11</h3>
-<p>Registra humedad ambiental.</p>
-</div>
+        <h2>Sensores utilizados</h2>
 
-</div>
+        <div class="tarjetas">
 
-</section>
+            <div class="tarjeta">
+                <h3>Sensor inductivo</h3>
+                <p>Detecta materiales metálicos.</p>
+            </div>
 
-<section id="flujograma">
+            <div class="tarjeta">
+                <h3>TCS3200</h3>
+                <p>
+                    Identifica características relacionadas con el color.
+                </p>
+            </div>
 
-<h2>Proceso de Clasificación</h2>
+            <div class="tarjeta">
+                <h3>HX711 + celda de carga</h3>
+                <p>Mide el peso del residuo.</p>
+            </div>
 
-<ol>
-<li>Ingreso del residuo.</li>
-<li>Transporte mediante banda.</li>
-<li>Lectura de sensores.</li>
-<li>Procesamiento de datos en ESP8266.</li>
-<li>Clasificación.</li>
-<li>Activación de servomotores.</li>
-<li>Depósito en contenedores.</li>
-<li>Conteo y monitoreo.</li>
-</ol>
+            <div class="tarjeta">
+                <h3>DHT11</h3>
+                <p>Registra la humedad ambiental.</p>
+            </div>
 
-</section>
+        </div>
 
-<section id="bitacora">
+    </section>
 
-<h2>Bitácora del Prototipo</h2>
+    <section id="flujograma">
 
-<p>
-Aquí podrás agregar fotografías, avances y evidencias del proyecto.
-</p>
+        <h2>Proceso de clasificación</h2>
 
-</section>
+        <ol>
+            <li>Ingreso del residuo.</li>
+            <li>Transporte mediante la banda.</li>
+            <li>Lectura de los sensores.</li>
+            <li>Procesamiento de datos en el ESP8266.</li>
+            <li>Clasificación del residuo.</li>
+            <li>Activación de los servomotores.</li>
+            <li>Depósito en el contenedor correspondiente.</li>
+            <li>Conteo y monitoreo de resultados.</li>
+        </ol>
 
-<section id="simulaciones">
+    </section>
 
-<h2>Simulaciones</h2>
+    <section id="bitacora">
 
-<p>
-Aquí podrás poner los enlaces de Wokwi y Google Colab.
-</p>
+        <h2>Bitácora del prototipo</h2>
 
-<footer>
-<p>Proyecto Académico 2026 ♻️</p>
-</footer>
+        <p>
+            Aquí podrás agregar fotografías, avances y evidencias
+            del desarrollo del proyecto.
+        </p>
 
-    <script>
-let metal = 0;
-let plastico = 0;
-let vidrio = 0;
-let organico = 0;
-let procesados = 0;
+    </section>
 
-function simularCorrida() {
+    <section id="simulaciones">
 
-    // Reiniciar contadores
-    metal = 0;
-    plastico = 0;
-    vidrio = 0;
-    organico = 0;
-    procesados = 0;
+        <h2>Simulaciones</h2>
 
-    let telemetria = "";
+        <p>
+            Aquí podrás colocar los enlaces de las simulaciones realizadas
+            en Wokwi y Google Colab.
+        </p>
 
-    // Crear 20 residuos simulados
-    for (let i = 1; i <= 20; i++) {
+    </section>
 
-        const residuos = [
-            "Metal",
-            "Plástico",
-            "Vidrio",
-            "Orgánico"
-        ];
-
-        const objeto = residuos[
-            Math.floor(Math.random() * residuos.length)
-        ];
-
-        procesados++;
-
-        if (objeto === "Metal") {
-            metal++;
-            telemetria +=
-                `[Objeto ${i}] Sensor inductivo: SÍ → METAL\n`;
-        }
-
-        if (objeto === "Plástico") {
-            plastico++;
-            telemetria +=
-                `[Objeto ${i}] Peso bajo y color detectado → PLÁSTICO\n`;
-        }
-
-        if (objeto === "Vidrio") {
-            vidrio++;
-            telemetria +=
-                `[Objeto ${i}] Peso alto y material transparente → VIDRIO\n`;
-        }
-
-        if (objeto === "Orgánico") {
-            organico++;
-            telemetria +=
-                `[Objeto ${i}] Humedad alta → ORGÁNICO\n`;
-        }
-    }
-
-    // Actualizar los datos en la página
-    document.getElementById("lote").textContent =
-        procesados + " / 20";
-
-    document.getElementById("metal").textContent = metal;
-    document.getElementById("plastico").textContent = plastico;
-    document.getElementById("vidrio").textContent = vidrio;
-    document.getElementById("organico").textContent = organico;
-
-    // Todos los materiales clasificados se consideran aprovechados
-    const aprovechados =
-        metal + plastico + vidrio + organico;
-
-    const porcentaje =
-        (aprovechados / procesados) * 100;
-
-    document.getElementById("aprovechamiento").textContent =
-        porcentaje.toFixed(0) + "%";
-
-    document.getElementById("telemetria").value =
-        telemetria;
-}
-</script>
+    <footer>
+        <p>Proyecto académico 2026 ♻️</p>
+    </footer>
 
 </body>
+
 </html>
