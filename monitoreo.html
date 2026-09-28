@@ -1,32 +1,334 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monitoreo en Vivo</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoreo en Vivo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #198754;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        nav {
+            background: #146c43;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #198754;
+        }
+
+        .contenedor {
+            width: 85%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .resumen {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta {
+            flex: 1;
+            min-width: 180px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .tarjeta h3 {
+            color: #198754;
+            margin-top: 0;
+        }
+
+        .numero {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .clasificacion {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .panel {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .panel h2 {
+            color: #198754;
+        }
+
+        button {
+            background: #198754;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #146c43;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 280px;
+            margin-top: 15px;
+            padding: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            resize: vertical;
+            font-family: monospace;
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: #198754;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .clasificacion {
+                grid-template-columns: 1fr;
+            }
+
+            .contenedor {
+                width: 92%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Monitoreo en Vivo</h1>
+    <header>
+        <h1>Monitoreo en Vivo</h1>
 
-<p>Lote Oficial: <span id="lote">0 / 20</span></p>
+        <p>
+            Sistema de Gestión y Clasificación Automatizada de Residuos
+        </p>
+    </header>
 
-<p>Metal: <span id="metal">0</span></p>
+    <nav>
+        index.html⬅ Volver a la página principal</a>
+    </nav>
 
-<button onclick="simularCorrida()">
-Simular Corrida (20 Objetos)
-</button>
+    <main class="contenedor">
 
-<script>
+        <div class="resumen">
 
-function simularCorrida(){
- document.getElementById("lote").innerHTML="20 / 20";
- document.getElementById("metal").innerHTML="5";
-}
+            <div class="tarjeta">
+                <h3>Lote oficial</h3>
+                <p class="numero" id="lote">0 / 20</p>
+            </div>
 
-</script>
+            <div class="tarjeta">
+                <h3>Aprovechamiento</h3>
+                <p class="numero" id="aprovechamiento">0%</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Estado</h3>
+                <p class="numero" id="estado">En espera</p>
+            </div>
+
+        </div>
+
+        <div class="clasificacion">
+
+            <div class="tarjeta">
+                <h3>🥫 Metal</h3>
+                <p class="numero" id="metal">0</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>♻️ Plástico</h3>
+                <p class="numero" id="plastico">0</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🍾 Vidrio</h3>
+                <p class="numero" id="vidrio">0</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🍃 Orgánico</h3>
+                <p class="numero" id="organico">0</p>
+            </div>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>Simulación del prototipo</h2>
+
+            <p>
+                Al iniciar la simulación, el sistema procesará un lote de
+                20 objetos y mostrará el resultado de la clasificación.
+            </p>
+
+            <button onclick="simularCorrida()">
+                Simular corrida de 20 objetos
+            </button>
+
+            <h2>Registro de telemetría</h2>
+
+            <textarea
+                id="telemetria"
+                readonly
+                placeholder="Aquí aparecerán los resultados de la simulación..."
+            ></textarea>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Proyecto académico 2026 ♻️</p>
+    </footer>
+
+    <script>
+        function simularCorrida() {
+
+            let metal = 0;
+            let plastico = 0;
+            let vidrio = 0;
+            let organico = 0;
+
+            let telemetria = "";
+
+            const residuos = [
+                "Metal",
+                "Plástico",
+                "Vidrio",
+                "Orgánico"
+            ];
+
+            document.getElementById("estado").textContent =
+                "Procesando";
+
+            for (let i = 1; i <= 20; i++) {
+
+                const residuo =
+                    residuos[Math.floor(Math.random() * residuos.length)];
+
+                if (residuo === "Metal") {
+                    metal++;
+
+                    telemetria +=
+                        "[Objeto " + i + "] " +
+                        "Sensor inductivo: SÍ → METAL\n";
+                }
+
+                if (residuo === "Plástico") {
+                    plastico++;
+
+                    telemetria +=
+                        "[Objeto " + i + "] " +
+                        "Peso bajo y color detectado → PLÁSTICO\n";
+                }
+
+                if (residuo === "Vidrio") {
+                    vidrio++;
+
+                    telemetria +=
+                        "[Objeto " + i + "] " +
+                        "Peso alto y material transparente → VIDRIO\n";
+                }
+
+                if (residuo === "Orgánico") {
+                    organico++;
+
+                    telemetria +=
+                        "[Objeto " + i + "] " +
+                        "Humedad alta → ORGÁNICO\n";
+                }
+            }
+
+            const total =
+                metal + plastico + vidrio + organico;
+
+            const porcentaje =
+                (total / 20) * 100;
+
+            document.getElementById("lote").textContent =
+                total + " / 20";
+
+            document.getElementById("metal").textContent =
+                metal;
+
+            document.getElementById("plastico").textContent =
+                plastico;
+
+            document.getElementById("vidrio").textContent =
+                vidrio;
+
+            document.getElementById("organico").textContent =
+                organico;
+
+            document.getElementById("aprovechamiento").textContent =
+                porcentaje.toFixed(0) + "%";
+
+            document.getElementById("estado").textContent =
+                "Finalizado";
+
+            telemetria += "\n----------------------------\n";
+            telemetria += "RESUMEN DEL LOTE\n";
+            telemetria += "Total procesado: " + total + " objetos\n";
+            telemetria += "Metal: " + metal + "\n";
+            telemetria += "Plástico: " + plastico + "\n";
+            telemetria += "Vidrio: " + vidrio + "\n";
+            telemetria += "Orgánico: " + organico + "\n";
+            telemetria +=
+                "Aprovechamiento: " +
+                porcentaje.toFixed(0) + "%\n";
+
+            document.getElementById("telemetria").value =
+                telemetria;
+        }
+    </script>
 
 </body>
-</html>
 
+</html>
