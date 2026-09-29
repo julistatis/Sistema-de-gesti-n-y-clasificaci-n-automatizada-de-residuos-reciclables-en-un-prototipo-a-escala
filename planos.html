@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+content="width=device-width,initial-scale=1.0">
 
+  <title>Simulaciones</title>
+  
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    background: #198754;
+    color: white;
+    padding: 35px 20px;
+}
+
+nav {
+    background: #146c43;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.simulaciones {
+    width: 85%;
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta h2 {
+    color: #198754;
+}
+
+.tarjeta img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.tarjeta a {
+    display: inline-block;
+    background: #198754;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+footer {
+    background: #198754;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .simulaciones {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+
+  <header>
+     <h1>Simulaciones</h1>
+     <p>Pruebas virtuales del sistema de clasificación automatizada de residuos</p>
+  </header>
+
+  <nav>
+    <a href="index.html"> Volver a la página principal</a>
+  </nav>
+
+  <main class="simulaciones">
+
+      <section class="tarjeta">
+
+  <h2>Simulacion 1 - Wokwi</h2>
+
+  <img src="imagen 2 wokwi.png"
+  alt="Simulacion 1 en wokwi"
+  width="600">
+
+  <br><br>
+
+  <a href="https://wokwi.com/projects/475815799753553921"
+  target="_blank">
+      Ver simulacion 1 en Wokwi
+      </a>
+      </section>
+      <section class="tarjeta">
+
+          <h2>Simulacion 2 - Colab</h2>
+
+<img src="imagen 1.png"
+alt="Simulacion 2 en Colab"
+width="600">
+
+<br><br>
+
+<a href="https://colab.research.google.com/drive/1rgB5RShChGT-_jRKeGKsdGIWetleyGFn#scrollTo=6YVW-F1TWZDn"
+target="_blank"> 
+    Ver simulacion 2 en Colab
+</a>
+
+</section>
+</main>
+
+<footer>
+    <p>Proyecto académico 2026 ♻️</p>
+</footer>
+
+</body>
+</html>
