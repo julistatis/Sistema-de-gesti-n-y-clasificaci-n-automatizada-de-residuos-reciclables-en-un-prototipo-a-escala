@@ -1,248 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
+  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width,initial-scale=1.0">
 
-    <title>Bitácora | Sistema de clasificación de residuos</title>
+  <title>Bitácora</title>
+  
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    text-align: center;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+header {
+    background: #198754;
+    color: white;
+    padding: 35px 20px;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f7f3;
-            color: #333;
-        }
+nav {
+    background: #146c43;
+    padding: 15px;
+}
 
-        /* ENCABEZADO */
-        header {
-            background-color: #2e7d32;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        header h1 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+.bitacora {
+    width: 85%;
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-        header p {
-            font-size: 17px;
-        }
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
 
-        /* BOTÓN REGRESAR */
-        .regresar {
-            width: 90%;
-            max-width: 1100px;
-            margin: 25px auto 0;
-        }
+.tarjeta h2 {
+    color: #198754;
+}
 
-        .btn-regresar {
-            display: inline-block;
-            background-color: #2e7d32;
-            color: white;
-            text-decoration: none;
-            padding: 12px 22px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.tarjeta img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: contain;
+}
 
-        .btn-regresar:hover {
-            background-color: #1b5e20;
-        }
+.tarjeta p {
+    color: #555;
+}
 
-        /* CONTENIDO */
-        .contenedor {
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-        }
+footer {
+    background: #198754;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
 
-        .introduccion {
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-            margin-bottom: 30px;
-            text-align: center;
-        }
+@media (max-width: 700px) {
+    .bitacora {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 
-        .introduccion h2 {
-            color: #2e7d32;
-            margin-bottom: 15px;
-        }
-
-        .introduccion p {
-            line-height: 1.6;
-        }
-
-        /* GALERÍA */
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .tarjeta {
-            background-color: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-            transition: transform 0.3s;
-        }
-
-        .tarjeta:hover {
-            transform: translateY(-5px);
-        }
-
-        .tarjeta img {
-            width: 100%;
-            height: 350px;
-            object-fit: contain;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-        }
-
-        .tarjeta h3 {
-            color: #2e7d32;
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        .tarjeta p {
-            margin-top: 8px;
-            text-align: center;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        /* PIE DE PÁGINA */
-        footer {
-            background-color: #1b5e20;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        /* CELULAR */
-        @media (max-width: 700px) {
-            .galeria {
-                grid-template-columns: 1fr;
-            }
-
-            header h1 {
-                font-size: 27px;
-            }
-
-            .tarjeta img {
-                height: auto;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>📖 Bitácora del Proyecto</h1>
-        <p>Sistema de gestión y clasificación automatizada de residuos reciclables</p>
-    </header>
+  <header>
+     <h1>Bitácora</h1>
+     <p>Registro y evidencias del desarrollo del sistema de clasificación automatizada de residuos</p>
+  </header>
 
-    <div class="regresar">
-        <a href="index.html" class="btn-regresar">
-            ← Regresar al inicio
-        </a>
-    </div>
+  <nav>
+    <a href="index.html">Volver a la página principal</a>
+  </nav>
 
-    <main class="contenedor">
+  <main class="bitacora">
 
-        <section class="introduccion">
-            <h2>Registro del desarrollo del proyecto</h2>
+      <section class="tarjeta">
 
-            <p>
-                En esta bitácora se presenta el proceso de desarrollo de nuestro
-                prototipo de clasificación automatizada de residuos. Las siguientes
-                evidencias muestran diferentes etapas de construcción, preparación,
-                montaje y pruebas realizadas durante el proyecto.
-            </p>
-        </section>
+          <h2>Evidencia 1</h2>
 
-        <section class="galeria">
+          <img src="IMG_0163 (1).jpeg"
+          alt="Evidencia 1">
 
-            <!-- IMAGEN 1 -->
-            <div class="tarjeta">
-                <img src="IMG_0163 (1).jpeg" alt="Evidencia 1 del proyecto">
-                <h3>Evidencia 1</h3>
-                <p>Registro del proceso de desarrollo del prototipo.</p>
-            </div>
+          <p>Proceso de desarrollo del prototipo.</p>
 
-            <!-- IMAGEN 2 -->
-            <div class="tarjeta">
-                <img src="IMG_0164.jpeg" alt="Evidencia 2 del proyecto">
-                <h3>Evidencia 2</h3>
-                <p>Avance realizado durante la construcción del proyecto.</p>
-            </div>
+      </section>
 
-            <!-- IMAGEN 3 -->
-            <div class="tarjeta">
-                <img src="IMG_0165.jpeg" alt="Evidencia 3 del proyecto">
-                <h3>Evidencia 3</h3>
-                <p>Proceso de preparación y montaje del prototipo.</p>
-            </div>
 
-            <!-- IMAGEN 4 -->
-            <div class="tarjeta">
-                <img src="IMG_0166.jpeg" alt="Evidencia 4 del proyecto">
-                <h3>Evidencia 4</h3>
-                <p>Desarrollo de los diferentes componentes del sistema.</p>
-            </div>
+      <section class="tarjeta">
 
-            <!-- IMAGEN 5 -->
-            <div class="tarjeta">
-                <img src="IMG_0167.jpeg" alt="Evidencia 5 del proyecto">
-                <h3>Evidencia 5</h3>
-                <p>Integración de elementos utilizados en el prototipo.</p>
-            </div>
+          <h2>Evidencia 2</h2>
 
-            <!-- IMAGEN 6 -->
-            <div class="tarjeta">
-                <img src="IMG_0168.jpeg" alt="Evidencia 6 del proyecto">
-                <h3>Evidencia 6</h3>
-                <p>Avance en la implementación del sistema automatizado.</p>
-            </div>
+          <img src="IMG_0164.jpeg"
+          alt="Evidencia 2">
 
-            <!-- IMAGEN 7 -->
-            <div class="tarjeta">
-                <img src="IMG_0169.jpeg" alt="Evidencia 7 del proyecto">
-                <h3>Evidencia 7</h3>
-                <p>Proceso de ajuste y organización del prototipo.</p>
-            </div>
+          <p>Avance en la construcción del proyecto.</p>
 
-            <!-- IMAGEN 8 -->
-            <div class="tarjeta">
-                <img src="IMG_0171.jpeg" alt="Evidencia 8 del proyecto">
-                <h3>Evidencia 8</h3>
-                <p>Registro de los avances obtenidos durante el proyecto.</p>
-            </div>
+      </section>
 
-        </section>
 
-    </main>
+      <section class="tarjeta">
 
-    <footer>
-        <p>
-            Sistema de gestión y clasificación automatizada de residuos reciclables
-        </p>
-    </footer>
+          <h2>Evidencia 3</h2>
+
+          <img src="IMG_0165.jpeg"
+          alt="Evidencia 3">
+
+          <p>Proceso de construcción de la maqueta.</p>
+
+      </section>
+
+
+      <section class="tarjeta">
+
+          <h2>Evidencia 4</h2>
+
+          <img src="IMG_0166.jpeg"
+          alt="Evidencia 4">
+
+          <p>Desarrollo de los componentes del sistema.</p>
+
+      </section>
+
+
+      <section class="tarjeta">
+
+          <h2>Evidencia 5</h2>
+
+          <img src="IMG_0167.jpeg"
+          alt="Evidencia 5">
+
+          <p>Integración de los elementos del prototipo.</p>
+
+      </section>
+
+
+      <section class="tarjeta">
+
+          <h2>Evidencia 6</h2>
+
+          <img src="IMG_0168.jpeg"
+          alt="Evidencia 6">
+
+          <p>Implementación del sistema automatizado.</p>
+
+      </section>
+
+
+      <section class="tarjeta">
+
+          <h2>Evidencia 7</h2>
+
+          <img src="IMG_0169.jpeg"
+          alt="Evidencia 7">
+
+          <p>Ajustes realizados al prototipo.</p>
+
+      </section>
+
+
+      <section class="tarjeta">
+
+          <h2>Evidencia 8</h2>
+
+          <img src="IMG_0171.jpeg"
+          alt="Evidencia 8">
+
+          <p>Avances obtenidos durante el desarrollo del proyecto.</p>
+
+      </section>
+
+  </main>
+
+  <footer>
+      <p>Proyecto académico 2026 ♻️</p>
+  </footer>
 
 </body>
 </html>
-
