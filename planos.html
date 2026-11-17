@@ -1,134 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
-  
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Planos</title>
-  
+  <title>Bitácora</title>
+
   <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
-    text-align: center;
-}
-
-header {
-    background: #198754;
-    color: white;
-    padding: 35px 20px;
-}
-
-nav {
-    background: #146c43;
-    padding: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.simulaciones {
-    width: 85%;
-    max-width: 1000px;
-    margin: 25px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.tarjeta {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-.tarjeta h2 {
-    color: #198754;
-}
-
-.tarjeta img {
-    width: 100%;
-    max-width: 600px;
-    height: 300px;
-    object-fit: contain;
-}
-
-.tarjeta a {
-    display: inline-block;
-    background: #198754;
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-footer {
-    background: #198754;
-    color: white;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-@media (max-width: 700px) {
-    .simulaciones {
-        grid-template-columns: 1fr;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+        text-align: center;
     }
-}
-.rotar{
-    transform: rotate(-90deg);
-    width: 300px;
-}      
-</style>
+
+    header {
+        background: #198754;
+        color: white;
+        padding: 35px 20px;
+    }
+
+    nav {
+        background: #146c43;
+        padding: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .bitacora {
+        width: 85%;
+        max-width: 1000px;
+        margin: 25px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tarjeta {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .tarjeta h2 {
+        color: #198754;
+    }
+
+    .tarjeta img {
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .tarjeta p {
+        color: #555;
+        line-height: 1.5;
+    }
+
+    footer {
+        background: #198754;
+        color: white;
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 700px) {
+        .bitacora {
+            grid-template-columns: 1fr;
+        }
+
+        .tarjeta img {
+            height: auto;
+        }
+    }
+  </style>
 
 </head>
+
 <body>
 
   <header>
-     <h1>Planos</h1>
-     <p>Diseños y planos del sistema de clasificacion automatizada de reisduos</p>
+    <h1>Bitácora</h1>
+    <p>Registro del desarrollo del sistema de clasificación automatizada de residuos</p>
   </header>
 
   <nav>
-    <a href="index.html"> Volver a la página principal</a>
+    <a href="index.html">← Volver a la página principal</a>
   </nav>
 
-  <main class="simulaciones">
+  <main class="bitacora">
 
-      <section class="tarjeta">
+    <section class="tarjeta">
+      <h2>Evidencia 1</h2>
 
-  <h2>Primer boceto - Vista superior</h2>
+      <img src="IMG_0163 (1).jpeg"
+           alt="Evidencia 1 del proyecto">
 
-    <img src="prototipo.jpeg"
-    alt="Boceto - Vista superior"
-    class="rotar">
+      <p>Registro del proceso de desarrollo del proyecto.</p>
+    </section>
 
-  <br><br>
 
-      </section>
-      <section class="tarjeta">
+    <section class="tarjeta">
+      <h2>Evidencia 2</h2>
 
-          <h2>Segundo boceto - Vista frontal</h2>
+      <img src="IMG_0164.jpeg"
+           alt="Evidencia 2 del proyecto">
 
-<img src="prototipo.png"
-alt="Boceto - Vista frontal"
-width="600">
+      <p>Avance realizado durante la construcción del prototipo.</p>
+    </section>
 
-<br><br>
 
-</section>
-</main>
+    <section class="tarjeta">
+      <h2>Evidencia 3</h2>
 
-<footer>
+      <img src="IMG_0165.jpeg"
+           alt="Evidencia 3 del proyecto">
+
+      <p>Proceso de preparación y construcción de la maqueta.</p>
+    </section>
+
+
+    <section class="tarjeta">
+      <h2>Evidencia 4</h2>
+
+      <img src="IMG_0166.jpeg"
+           alt="Evidencia 4 del proyecto">
+
+      <p>Desarrollo de los diferentes componentes del sistema.</p>
+    </section>
+
+
+    <section class="tarjeta">
+      <h2>Evidencia 5</h2>
+
+      <img src="IMG_0167.jpeg"
+           alt="Evidencia 5 del proyecto">
+
+      <p>Integración de los elementos utilizados en el prototipo.</p>
+    </section>
+
+
+    <section class="tarjeta">
+      <h2>Evidencia 6</h2>
+
+      <img src="IMG_0168.jpeg"
+           alt="Evidencia 6 del proyecto">
+
+      <p>Avance en la implementación del sistema automatizado.</p>
+    </section>
+
+
+    <section class="tarjeta">
+      <h2>Evidencia 7</h2>
+
+      <img src="IMG_0169.jpeg"
+           alt="Evidencia 7 del proyecto">
+
+      <p>Proceso de ajuste y organización de los componentes.</p>
+    </section>
+
+
+    <section class="tarjeta">
+      <h2>Evidencia 8</h2>
+
+      <img src="IMG_0171.jpeg"
+           alt="Evidencia 8 del proyecto">
+
+      <p>Registro de los avances obtenidos durante el desarrollo del proyecto.</p>
+    </section>
+
+  </main>
+
+
+  <footer>
     <p>Proyecto académico 2026 ♻️</p>
-</footer>
+  </footer>
 
 </body>
+
 </html>
