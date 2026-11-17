@@ -10,6 +10,7 @@
     </title>
 
     <style>
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -55,6 +56,37 @@
             color: #198754;
         }
 
+        /* =========================================
+           DESCRIPCIÓN + IMAGEN
+        ========================================= */
+
+        .contenido-inicio {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .texto-inicio {
+            text-align: left;
+        }
+
+        .imagen-proyecto {
+            text-align: center;
+        }
+
+        .imagen-proyecto img {
+            width: 100%;
+            max-width: 450px;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        /* =========================================
+           TARJETAS
+        ========================================= */
+
         .tarjetas {
             display: flex;
             flex-wrap: wrap;
@@ -69,6 +101,48 @@
             border-radius: 10px;
         }
 
+        /* =========================================
+           TABLA DE COSTOS
+        ========================================= */
+
+        .tabla-contenedor {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #d7e0ef;
+            color: #222;
+            padding: 12px;
+            border: 1px solid #555;
+            text-align: center;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #555;
+        }
+
+        tbody tr:hover {
+            background: #f1f8f3;
+        }
+
+        .total-costos {
+            background: #e8f5e9;
+            font-weight: bold;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
         footer {
             text-align: center;
             background: #198754;
@@ -77,7 +151,12 @@
             margin-top: 20px;
         }
 
-        @media (max-width: 600px) {
+        /* =========================================
+           CELULAR
+        ========================================= */
+
+        @media (max-width: 700px) {
+
             header {
                 padding: 30px 20px;
             }
@@ -94,74 +173,530 @@
                 display: block;
                 margin: 5px;
             }
+
+            .contenido-inicio {
+                grid-template-columns: 1fr;
+            }
+
+            .imagen-proyecto img {
+                height: auto;
+            }
+
+            table {
+                min-width: 700px;
+            }
         }
+
     </style>
+
 </head>
 
 <body>
 
+    <!-- =========================================
+         ENCABEZADO
+    ========================================== -->
+
     <header>
+
         <h1>
             SISTEMA DE GESTIÓN Y CLASIFICACIÓN AUTOMATIZADA
             DE RESIDUOS RECICLABLES EN UN PROTOTIPO A ESCALA
         </h1>
 
-        <p>Caso de aplicación: Localidad de Kennedy, Bogotá</p>
+        <p>
+            Caso de aplicación: Localidad de Kennedy, Bogotá
+        </p>
+
     </header>
 
+
+    <!-- =========================================
+         MENÚ
+    ========================================== -->
+
     <nav>
+
         <a href="#inicio">Inicio</a>
-        <a href="planos.html">Planos</a>
-        <a href="bitacora.html">Bitácora</a>
-        <a href="simulaciones.html">Simulaciones</a>
-        <a href="monitoreo.html">Monitoreo en vivo</a>
-        <a href="sobrenosotros.html">Sobre nosotros</a>
-        <a href="reflexión.html">Reflexion</a>
-        <a href="esp32.html">ESP32</a>
+
+        <a href="planos.html">
+            Planos
+        </a>
+
+        <a href="bitacora.html">
+            Bitácora
+        </a>
+
+        <a href="simulaciones.html">
+            Simulaciones
+        </a>
+
+        <a href="monitoreo.html">
+            Monitoreo en vivo
+        </a>
+
+        <a href="sobrenosotros.html">
+            Sobre nosotros
+        </a>
+
+        <a href="reflexión.html">
+            Reflexion
+        </a>
+
+        <a href="esp32.html">
+            ESP32
+        </a>
+
     </nav>
+
+
+    <!-- =========================================
+         INICIO
+    ========================================== -->
 
     <section id="inicio">
 
-        <h2>Descripción del proyecto</h2>
+        <div class="contenido-inicio">
 
-        <p>
-            Este proyecto consiste en el diseño y construcción de un
-            prototipo a escala para la clasificación automatizada de
-            residuos reciclables, tomando como referencia la problemática
-            de los residuos sólidos en la localidad de Kennedy.
-        </p>
 
-        <h2>Sensores utilizados</h2>
+            <!-- LADO IZQUIERDO -->
 
-        <div class="tarjetas">
+            <div class="texto-inicio">
 
-            <div class="tarjeta">
-                <h3>TCS3200</h3>
+                <h2>
+                    Descripción del proyecto
+                </h2>
+
                 <p>
-                    Identifica características relacionadas con el color.
+                    Este proyecto consiste en el diseño y construcción
+                    de un prototipo a escala para la clasificación
+                    automatizada de residuos reciclables, tomando como
+                    referencia la problemática de los residuos sólidos
+                    en la localidad de Kennedy.
                 </p>
+
+
+                <h2>
+                    Sensores utilizados
+                </h2>
+
+
+                <div class="tarjetas">
+
+                    <div class="tarjeta">
+
+                        <h3>TCS3200</h3>
+
+                        <p>
+                            Identifica características relacionadas
+                            con el color.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
+
+            <!-- LADO DERECHO -->
+
+            <div class="imagen-proyecto">
+
+                <img
+                    src="IMG_0180.jpeg"
+                    alt="Prototipo del sistema automatizado de clasificación de residuos">
+
+            </div>
+
+
+        </div>
+
     </section>
+
+
+    <!-- =========================================
+         PROCESO DE CLASIFICACIÓN
+    ========================================== -->
 
     <section id="flujograma">
 
-        <h2>Proceso de clasificación</h2>
+        <h2>
+            Proceso de clasificación
+        </h2>
 
         <ol>
-            <li>Ingreso del residuo.</li>
-            <li>Transporte mediante la banda.</li>
-            <li>Lectura del sensor.</li>
-            <li>Procesamiento de datos en el ESP8266.</li>
-            <li>Clasificación del residuo.</li>
-            <li>Activación de los servomotores.</li>
-            <li>Depósito en el contenedor correspondiente.</li>
-            <li>Conteo y monitoreo de resultados.</li>
+
+            <li>
+                Ingreso del residuo.
+            </li>
+
+            <li>
+                Transporte mediante la banda.
+            </li>
+
+            <li>
+                Lectura del sensor TCS3200.
+            </li>
+
+            <li>
+                Procesamiento de datos en el ESP32.
+            </li>
+
+            <li>
+                Identificación del tipo de residuo.
+            </li>
+
+            <li>
+                Activación de los servomotores.
+            </li>
+
+            <li>
+                Depósito en el contenedor correspondiente.
+            </li>
+
+            <li>
+                Conteo y monitoreo de resultados.
+            </li>
+
         </ol>
+
     </section>
 
+
+    <!-- =========================================
+         COSTOS DEL PROTOTIPO
+    ========================================== -->
+
+    <section id="costos">
+
+        <h2>
+            Componentes y materiales del prototipo
+        </h2>
+
+        <p>
+            La siguiente tabla presenta los principales
+            componentes empleados en la construcción del prototipo
+            y sus costos.
+        </p>
+
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Material
+                        </th>
+
+                        <th>
+                            Cantidad
+                        </th>
+
+                        <th>
+                            Costo unitario COP
+                        </th>
+
+                        <th>
+                            Costo total COP
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            ESP32
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $14.000
+                        </td>
+
+                        <td>
+                            $14.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Sensor de color TCS3200
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $40.000
+                        </td>
+
+                        <td>
+                            $40.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Servomotor SG90
+                        </td>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            $10.000
+                        </td>
+
+                        <td>
+                            $20.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Módulo de alimentación MB102
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $10.500
+                        </td>
+
+                        <td>
+                            $10.500
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Protoboard
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $21.000
+                        </td>
+
+                        <td>
+                            $21.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Motorreductor
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $22.500
+                        </td>
+
+                        <td>
+                            $22.500
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Pila de 9 V y adaptador
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $20.000
+                        </td>
+
+                        <td>
+                            $20.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Banda transportadora
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Material reciclable
+                        </td>
+
+                        <td>
+                            $0
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Tolva cuadrada
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Material reciclable
+                        </td>
+
+                        <td>
+                            $0
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Barra de silicona
+                        </td>
+
+                        <td>
+                            15
+                        </td>
+
+                        <td>
+                            $400
+                        </td>
+
+                        <td>
+                            $6.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Pintura
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            $2.500
+                        </td>
+
+                        <td>
+                            $10.000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Cartón paja medio pliego
+                        </td>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            $2.000
+                        </td>
+
+                        <td>
+                            $4.000
+                        </td>
+
+                    </tr>
+
+
+                    <!-- TOTAL -->
+
+                    <tr class="total-costos">
+
+                        <td colspan="3">
+                            Costo total estimado del prototipo
+                        </td>
+
+                        <td>
+                            $168.000 COP
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
+
     <footer>
-        <p>Proyecto académico 2026 ♻️</p>
+
+        <p>
+            Proyecto académico 2026 ♻️
+        </p>
+
     </footer>
 
 </body>
