@@ -3,33 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Reflexión</title>
 
 <style>
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f5f5f5;
 }
 
+/* ENCABEZADO */
 header {
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    background: #198754;
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 30px 20px;
 }
 
-header h1 {
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-header p {
-    font-size: 24px;
-}
-
+/* BOTÓN VOLVER */
 .boton-regresar {
-    background: #1B5E20;
+    background: #146c43;
     text-align: center;
     padding: 15px;
 }
@@ -37,16 +32,23 @@ header p {
 .boton-regresar a {
     color: white;
     text-decoration: none;
-    font-size: 24px;
     font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
 }
 
+.boton-regresar a:hover {
+    background: #198754;
+}
+
+/* CONTENIDO */
 .contenedor {
     max-width: 1100px;
     margin: 30px auto;
     padding: 20px;
 }
 
+/* TARJETA */
 .tarjeta {
     background: white;
     border-radius: 15px;
@@ -55,7 +57,7 @@ header p {
 }
 
 .tarjeta h2 {
-    color: #2E7D32;
+    color: #198754;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -65,9 +67,28 @@ header p {
     line-height: 1.8;
     text-align: justify;
 }
+
+/* ADAPTACIÓN PARA CELULAR */
+@media (max-width: 768px) {
+
+    .contenedor {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .tarjeta {
+        padding: 22px;
+    }
+
+    .tarjeta p {
+        font-size: 18px;
+    }
+}
+
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -76,7 +97,7 @@ header p {
 </header>
 
 <div class="boton-regresar">
-<a href="index.html"> Volver a la página principal</a>
+    <a href="index.html">Volver a la página principal</a>
 </div>
 
 <div class="contenedor">
