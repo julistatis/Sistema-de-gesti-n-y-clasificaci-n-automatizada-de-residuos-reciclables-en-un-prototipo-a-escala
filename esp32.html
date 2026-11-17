@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>ESP32</title>
+  
+  <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    background: #198754;
+    color: white;
+    padding: 35px 20px;
+}
+
+nav {
+    background: #146c43;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenedor {
+    width: 85%;
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta h2 {
+    color: #198754;
+}
+
+.tarjeta p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.tarjeta img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.boton {
+    display: inline-block;
+    background: #198754;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.boton:hover {
+    background: #146c43;
+}
+
+footer {
+    background: #198754;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        height: auto;
+    }
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>ESP32</h1>
+
+    <p>
+        Sistema electrónico y monitoreo del proyecto
+        de clasificación automatizada de residuos
+    </p>
+
+</header>
+
+
+<nav>
+
+    <a href="index.html">
+        Volver a la página principal
+    </a>
+
+</nav>
+
+
+<main class="contenedor">
+
+
+<!-- MODELO 3D -->
+
+<section class="tarjeta">
+
+    <h2>Modelo 3D del proyecto</h2>
+
+    <p>
+        Representación tridimensional del prototipo
+        desarrollada en Blender para visualizar la
+        estructura y distribución de los componentes
+        del sistema automatizado.
+    </p>
+
+    <img src="blender.png"
+         alt="Modelo 3D del proyecto realizado en Blender">
+
+</section>
+
+
+<!-- MONITOREO ESP32 -->
+
+<section class="tarjeta">
+
+    <h2>Monitoreo en vivo</h2>
+
+    <p>
+        Visualización en tiempo real de los datos
+        obtenidos por el ESP32 durante el proceso de
+        clasificación de residuos.
+    </p>
+
+    <p>
+        Desde el monitoreo se puede consultar el color
+        detectado, el servo activado, el tipo de residuo
+        clasificado y el conteo de residuos.
+    </p>
+
+    <a
+       href="http://192.168.4.1"
+       class="boton">
+
+       Ver monitoreo en vivo
+
+    </a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>Proyecto académico 2026 ♻️</p>
+
+</footer>
+
+
+</body>
+</html>
 
