@@ -3,45 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Simulaciones</title>
 
 <style>
-body{
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f2f2f2;
+    background: #f5f5f5;
 }
 
-header{
-    background: #327143;
+/* ENCABEZADO */
+header {
+    background: #198754;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 30px 20px;
 }
 
-header h1{
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-header p{
-    font-size: 24px;
-}
-
-.boton-volver{
-    background: #327143;
+/* BOTÓN VOLVER */
+.boton-volver {
+    background: #146c43;
     text-align: center;
-    padding: 25px;
+    padding: 15px;
 }
 
-.boton-volver a{
+.boton-volver a {
     color: white;
     text-decoration: none;
-    font-size: 22px;
     font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
 }
 
-.contenedor{
+.boton-volver a:hover {
+    background: #198754;
+}
+
+/* CONTENEDOR */
+.contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -49,30 +50,33 @@ header p{
     padding: 40px 20px;
 }
 
-.tarjeta{
+/* TARJETAS */
+.tarjeta {
     background: white;
     width: 500px;
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta h2{
-    color: #4A8D5A;
+.tarjeta h2 {
+    color: #198754;
     font-size: 30px;
 }
 
-.tarjeta img{
+/* IMÁGENES */
+.tarjeta img {
     width: 100%;
     border-radius: 10px;
     margin: 20px 0;
 }
 
-.boton{
+/* BOTONES DE SIMULACIÓN */
+.boton {
     display: inline-block;
     padding: 15px 30px;
-    background: #4A8D5A;
+    background: #198754;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -80,7 +84,12 @@ header p{
     margin-top: 15px;
 }
 
-footer{
+.boton:hover {
+    background: #146c43;
+}
+
+/* PIE DE PÁGINA */
+footer {
     text-align: center;
     background: #198754;
     color: white;
@@ -88,25 +97,34 @@ footer{
     margin-top: 20px;
 }
 
-@media(max-width:768px){
+/* CELULAR */
+@media (max-width: 768px) {
 
-    header h1{
-        font-size: 40px;
+    .contenedor {
+        padding: 30px 15px;
     }
 
-    .tarjeta{
+    .tarjeta {
         width: 90%;
+        padding: 22px;
     }
 
+    .tarjeta h2 {
+        font-size: 26px;
+    }
 }
+
 </style>
 
 </head>
+
 <body>
 
 <header>
     <h1>Simulaciones</h1>
-    <p>Pruebas virtuales del sistema de clasificación automatizada de residuos</p>
+    <p>
+        Pruebas virtuales del sistema de clasificación automatizada de residuos
+    </p>
 </header>
 
 <div class="boton-volver">
@@ -116,27 +134,42 @@ footer{
 <div class="contenedor">
 
     <div class="tarjeta">
+
         <h2>Simulación 1 - Wokwi</h2>
 
-        <img src="imagen 2 wokwi.png"
-    alt="Simulación Wokwi">
+        <img
+            src="imagen 2 wokwi.png"
+            alt="Simulación Wokwi"
+        >
 
-        <a href="https://wokwi.com/projects/475815799753553921"
-        target="_blank" class="boton">
+        <a
+            href="https://wokwi.com/projects/475815799753553921"
+            target="_blank"
+            class="boton"
+        >
             Ver simulación 1 en Wokwi
         </a>
+
     </div>
 
+
     <div class="tarjeta">
+
         <h2>Simulación 2 - Colab</h2>
 
-        <img src="imagen 1.png"
-    alt="Simulación Colab">
+        <img
+            src="imagen 1.png"
+            alt="Simulación Colab"
+        >
 
-        <a href="https://colab.research.google.com/drive/1rgB5RShChGT-_jRKeGKsdGIWetleyGFn#scrollTo=6YVW-F1TWZDn"
-        target="_blank" class="boton">
+        <a
+            href="https://colab.research.google.com/drive/1rgB5RShChGT-\_jRKeGKsdGIWetleyGFn#scrollTo=6YVW-F1TWZDn"
+            target="_blank"
+            class="boton"
+        >
             Ver simulación 2 en Colab
         </a>
+
     </div>
 
 </div>
@@ -147,4 +180,3 @@ footer{
 
 </body>
 </html>
-
